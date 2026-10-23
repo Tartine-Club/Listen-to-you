@@ -28,6 +28,7 @@
   "organizer": { "@type": "Organization", "name": "Listen", "email": "contact@listen-to-you.com" },
   "performer": { "@type": "Person", "name": "Isabelle Franck-Ribas" },
   "offers": [
+    { "@type": "Offer", "name": "Chambre couple, 1 lit double (prix pour la chambre)", "price": "2100", "priceCurrency": "EUR" },
     { "@type": "Offer", "name": "Chambre partagée à deux", "price": "1100", "priceCurrency": "EUR" },
     { "@type": "Offer", "name": "Chambre partagée à quatre", "price": "880", "priceCurrency": "EUR" }
   ]
@@ -196,11 +197,11 @@
     <div class="place">
       <div>
         <p class="kicker">L'hébergement</p>
-        <h3>Des chambres partagées, à deux ou à quatre</h3>
+        <h3>Des chambres pour deux, pour quatre ou en couple</h3>
       </div>
       <div class="txt">
-        <p class="lede">Des chambres partagées à deux ou à quatre lits séparés.</p>
-        <p>De 880 à 1 100 € par personne selon la chambre. <a href="#tarifs">Voir les chambres et les tarifs</a></p>
+        <p class="lede">Des chambres partagées à deux ou à quatre lits séparés, et une chambre couple avec un lit double.</p>
+        <p>De 880 à 1 100 € par personne selon la chambre, ou 2 100 € pour la chambre couple. <a href="#tarifs">Voir les chambres et les tarifs</a></p>
       </div>
     </div>
   </section>
@@ -294,10 +295,11 @@
       <div class="stage-head">
         <p class="kicker">Tarifs</p>
         <h2 id="t-tarifs">Tarifs de la retraite</h2>
-        <p class="serif">Par personne, pour les 5 jours, selon la chambre</p>
+        <p class="serif">Pour les 5 jours, selon la chambre</p>
       </div>
 
-      <ul class="rooms two" aria-label="Tarifs par personne">
+      <ul class="rooms three" aria-label="Tarifs">
+        <li><span class="amt">2 100 € <small>/ chambre</small></span><b>Chambre couple</b><span>1 lit double, pour deux personnes</span></li>
         <li><span class="amt">1 100 € <small>/ pers.</small></span><b>Chambre partagée à deux</b><span>2 lits séparés</span></li>
         <li><span class="amt">880 € <small>/ pers.</small></span><b>Chambre partagée à quatre</b><span>4 lits séparés dans une grande chambre</span></li>
       </ul>
@@ -412,6 +414,7 @@
         <div class="field full">
           <label for="f-room">Chambre</label>
           <select id="f-room" name="room">
+            <option value="couple">Chambre couple · 2 100 € la chambre</option>
             <option value="r2">Chambre partagée à deux · 1 100 €</option>
             <option value="r4">Chambre partagée à quatre · 880 €</option>
           </select>
@@ -461,7 +464,7 @@
       <div class="faq-col" id="faq">
         <h3 class="col-title">Questions fréquentes</h3>
         <div class="faq">
-          <details><summary>Combien coûte la retraite ?</summary><p>1 100 € par personne en chambre partagée à deux, 880 € par personne en chambre partagée à quatre. Le prix comprend l'hébergement, les repas, les pratiques avec Isabelle, les randonnées et les soirées.</p></details>
+          <details><summary>Combien coûte la retraite ?</summary><p>1 100 € par personne en chambre partagée à deux, 880 € par personne en chambre partagée à quatre, ou 2 100 € pour la chambre couple. Le prix comprend l'hébergement, les repas, les pratiques avec Isabelle, les randonnées et les soirées.</p></details>
           <details><summary>Faut-il avoir déjà pratiqué le Pilates ou le Yoga ?</summary><p>Non. Les exercices sont adaptés à tout le monde, que vous débutiez ou que vous pratiquiez déjà.</p></details>
           <details><summary>Suis-je obligé·e de participer à toutes les activités ?</summary><p>Non. C'est un séjour à la carte : vous choisissez de venir aux cours et aux activités, ou de profiter du domaine à votre rythme.</p></details>
           <details><summary>Peut-on venir seul·e ?</summary><p>Oui. Les tarifs sont par personne, en chambre partagée avec d'autres participants.</p></details>
