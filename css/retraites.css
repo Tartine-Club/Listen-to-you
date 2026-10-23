@@ -271,3 +271,7 @@ html { scroll-behavior: smooth; }
 .voice { break-inside: avoid; margin-bottom: 24px; }
 @media (max-width: 1000px) { .voices { columns: 2; } }
 @media (max-width: 760px) { .voices { columns: 1; } .voice { padding: 24px 20px; } }
+
+/* Bandeaux orange : une étoile de chaque côté, en miroir */
+.band-star.l { right: auto; left: -90px; }
+@media (max-width: 760px) { .band-star.l { right: auto; left: -60px; } }

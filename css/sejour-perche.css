@@ -436,3 +436,5 @@ footer .wrap.legal { display: flex; flex-wrap: wrap; justify-content: center; ga
 .prog-cta { display: flex; justify-content: center; margin-top: 40px; }
 @media (max-width: 760px) { .days.two { grid-template-columns: minmax(0, 1fr); } .days.two .day + .day { border-left: 0; } }
 @media (max-width: 480px) { .rooms.two { grid-template-columns: minmax(0, 1fr); } }
+/* Réserver sur téléphone : le texte est aligné à gauche, les étoiles passent dans la marge du haut pour ne pas le couvrir */
+@media (max-width: 760px) { .cta .band-star { width: 56px; height: 56px; top: 12px; } .cta .band-star.l { left: -28px; } .cta .band-star.r { right: -28px; } }
