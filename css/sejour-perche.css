@@ -430,3 +430,9 @@ footer .wrap.legal { display: flex; flex-wrap: wrap; justify-content: center; ga
 .dates li.more { border-style: dashed; border-color: var(--divider); color: var(--ink-soft); }
 .dates > a { margin-left: auto; font-size: 0.9375rem; font-weight: 500; }
 @media (max-width: 760px) { .dates > a { margin-left: 0; } }
+/* Programme sur deux colonnes (jour d'arrivée + journée type), tarifs à deux chambres, lien vers le PDF du programme */
+.days.two { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 960px; margin-inline: auto; }
+.rooms.two { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 760px; }
+.prog-cta { display: flex; justify-content: center; margin-top: 40px; }
+@media (max-width: 760px) { .days.two { grid-template-columns: minmax(0, 1fr); } .days.two .day + .day { border-left: 0; } }
+@media (max-width: 480px) { .rooms.two { grid-template-columns: minmax(0, 1fr); } }
