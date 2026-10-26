@@ -424,7 +424,3 @@ footer .wrap.legal { display: flex; flex-wrap: wrap; justify-content: center; ga
 /* Résumé des conditions d'annulation sous les étapes de réservation */
 .cta-note { font-size: 0.875rem; line-height: 1.5; padding-top: 16px; border-top: 1px solid color-mix(in srgb, var(--beige) 45%, transparent); }
 .cta-note a { color: inherit; }
-/* Bouton secondaire sur fond orange : contour beige, renvoie vers la charte (conditions d'annulation) */
-.btn-outline-light { background: transparent; color: var(--beige); border-color: var(--beige); justify-self: start; }
-.btn-outline-light:hover { background: var(--beige); color: var(--orange); filter: none; }
-@media (max-width: 760px) { .btn-outline-light { justify-self: stretch; } }
