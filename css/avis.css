@@ -1,9 +1,11 @@
-/* Avis en carrousel, commun aux pages Retraites, Perche, Argia et Yaya : une phrase forte en grand, l'avis complet dessous, flèches et compteur */
-.slider { max-width: 860px; margin-inline: auto; display: grid; justify-items: center; gap: 24px; }
-.slides { width: 100%; display: flex; align-items: flex-start; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; transition: height .3s ease; }
+/* Avis en carrousel, commun aux pages Retraites, Perche, Argia et Yaya : une phrase forte en grand, l'avis complet dessous.
+   Hauteur fixe (celle de l'avis le plus long), avis courts centrés ; flèches à gauche et à droite, compteur dessous : les boutons ne bougent jamais. */
+.slider { max-width: 1000px; margin-inline: auto; display: grid; grid-template-columns: 48px minmax(0, 1fr) 48px; grid-template-areas: "star star star" "prev slides next" "count count count"; align-items: center; justify-items: center; column-gap: 32px; row-gap: 24px; }
+.slider > .star { grid-area: star; }
+.slides { grid-area: slides; width: 100%; display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; }
 .slides::-webkit-scrollbar { display: none; }
 .slides:focus-visible { outline-offset: 6px; }
-.slide { flex: 0 0 100%; scroll-snap-align: start; margin: 0; padding: 0 24px; display: grid; gap: 24px; justify-items: center; align-content: start; text-align: center; }
+.slide { flex: 0 0 100%; scroll-snap-align: start; margin: 0; padding: 0 8px; display: grid; gap: 24px; justify-items: center; align-content: center; text-align: center; }
 .slide blockquote { margin: 0; display: grid; gap: 20px; }
 .slide-hl { font-family: var(--f-serif); font-size: clamp(1.6rem, 3.6vw, 2.4rem); line-height: 1.2; text-wrap: balance; }
 .slide-hl::before { content: "« "; color: var(--orange); }
@@ -11,11 +13,20 @@
 .slide-full { max-width: 640px; margin-inline: auto; font-size: 1rem; line-height: 1.65; color: var(--ink-soft); }
 .slide figcaption { font-size: 0.875rem; color: var(--ink-soft); }
 .slide figcaption b { display: block; font-weight: 600; color: var(--ink); }
-.slider-nav { display: flex; align-items: center; gap: 24px; }
+/* Les boutons et le compteur sont placés directement dans la grille du carrousel */
+.slider-nav { display: contents; }
+.slider-prev { grid-area: prev; }
+.slider-next { grid-area: next; }
+.slider-count { grid-area: count; min-width: 5ch; text-align: center; font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
 .slider-nav button { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--orange); background: transparent; color: var(--orange); display: grid; place-items: center; cursor: pointer; transition: background .2s ease, color .2s ease; }
 .slider-nav button svg { width: 20px; height: 20px; }
 .slider-nav button:hover:not(:disabled) { background: var(--orange); color: var(--on-orange); }
 .slider-nav button:disabled { opacity: .35; cursor: default; }
-.slider-count { min-width: 5ch; text-align: center; font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
-@media (max-width: 760px) { .slide { padding: 0 4px; } .slide-full { font-size: 0.9375rem; } }
-@media (prefers-reduced-motion: reduce) { .slides { scroll-behavior: auto; transition: none; } .slider-nav button { transition: none; } }
+@media (max-width: 760px) {
+  .slider { grid-template-columns: 36px minmax(0, 1fr) 36px; column-gap: 8px; }
+  .slider-nav button { width: 36px; height: 36px; }
+  .slider-nav button svg { width: 16px; height: 16px; }
+  .slide { padding: 0; }
+  .slide-full { font-size: 0.9375rem; }
+}
+@media (prefers-reduced-motion: reduce) { .slides { scroll-behavior: auto; } .slider-nav button { transition: none; } }
