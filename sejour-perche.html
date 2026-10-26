@@ -390,15 +390,37 @@
       <p class="serif">Des retraites avec Isabelle depuis 2020</p>
     </div>
     <div class="wrap">
-    <figure class="voice-feature">
+    <!-- Avis en carrousel : une phrase forte en grand, l'avis complet dessous ; flèches, compteur, glisser du doigt. Sans JavaScript, la bande reste défilable. -->
+    <div class="slider" aria-roledescription="carrousel" aria-label="Avis des participants">
       <svg class="star" aria-hidden="true"><use href="#star"/></svg>
-      <blockquote>Après 2 jours et 2 nuits, je repars à chaque fois avec la sensation d'être partie une semaine.</blockquote>
-      <figcaption><b>Karyn L.</b>Moulin de Tessé, Yvelines</figcaption>
-    </figure>
-    <div class="voices">
-      <figure class="voice"><blockquote>J'ai participé à 4 ou 5 séjours organisés par Isabelle. Ils sont extrêmement ressourçants pour le corps et l'esprit. Elle sait créer un esprit de bienveillance et d'acceptation, tant dans la pratique des cours de Pilates et de Yoga que dans l'ambiance qui règne pendant les pauses, les repas… Cela ne veut pas dire que nos corps ne sont pas « challengés » ! Après 2 jours et 2 nuits de séjour, je repars à chaque fois avec la sensation d'être partie une semaine, et un corps avec quelques courbatures, dont nous avons pris soin, jamais traumatisé. Les repas d'Agathe sont tellement bons : nous nous régalons de mets sains, rassasiants et jamais lourds à digérer. Bref, une super expérience que je recommande… mais du bout des lèvres, car j'aimerais garder cette pépite de séjour rien que pour moi et les amies que je me suis faites lors des sessions précédentes !</blockquote><figcaption><b>Karyn L.</b>Moulin de Tessé, Yvelines</figcaption></figure>
-      <figure class="voice"><blockquote>Je ne peux plus me passer désormais des retraites qu'Isabelle organise : elles sont devenues pour moi l'échappée annuelle incontournable dans cette vie toujours plus rapide. Une occasion de me poser, de rencontrer des personnes dont certaines sont devenues mes amies, de ne plus compter le temps, tout en me recentrant sur mon corps. Tout ça agrémenté de mets qui ravissent nos papilles et offrent également à notre corps une occasion de se régénérer. Isabelle y reste disponible, entière, attentive à chacun d'entre nous et par-dessus tout une excellente professeure. Je ne recommande presque pas, car il risque de ne plus y avoir de place !</blockquote><figcaption><b>Karine G.</b>Moulin de Tessé, Yvelines · 3 années de suite</figcaption></figure>
-      <figure class="voice"><blockquote>Une première pour moi et que de bonnes surprises. Isabelle sait s'adapter à tous les niveaux. De la bienveillance, des rires, de la détente, des promenades et aussi des courbatures ! Une belle retraite sportive, je recommande !</blockquote><figcaption><b>Marine L.</b>Maison Welcome, près d'Angoulême · mars 2024</figcaption></figure>
+      <div class="slides" tabindex="0">
+        <figure class="slide" role="group" aria-roledescription="avis" aria-label="1 sur 3">
+          <blockquote>
+            <p class="slide-hl">Après 2 jours et 2 nuits, je repars à chaque fois avec la sensation d'être partie une semaine.</p>
+            <p class="slide-full">J'ai participé à 4 ou 5 séjours organisés par Isabelle. Ils sont extrêmement ressourçants pour le corps et l'esprit. Elle sait créer un esprit de bienveillance et d'acceptation, tant dans la pratique des cours de Pilates et de Yoga que dans l'ambiance qui règne pendant les pauses, les repas… Cela ne veut pas dire que nos corps ne sont pas « challengés » ! Après 2 jours et 2 nuits de séjour, je repars à chaque fois avec la sensation d'être partie une semaine, et un corps avec quelques courbatures, dont nous avons pris soin, jamais traumatisé. Les repas d'Agathe sont tellement bons : nous nous régalons de mets sains, rassasiants et jamais lourds à digérer. Bref, une super expérience que je recommande… mais du bout des lèvres, car j'aimerais garder cette pépite de séjour rien que pour moi et les amies que je me suis faites lors des sessions précédentes !</p>
+          </blockquote>
+          <figcaption><b>Karyn L.</b>Moulin de Tessé, Yvelines</figcaption>
+        </figure>
+        <figure class="slide" role="group" aria-roledescription="avis" aria-label="2 sur 3">
+          <blockquote>
+            <p class="slide-hl">Elles sont devenues pour moi l'échappée annuelle incontournable dans cette vie toujours plus rapide.</p>
+            <p class="slide-full">Je ne peux plus me passer désormais des retraites qu'Isabelle organise : elles sont devenues pour moi l'échappée annuelle incontournable dans cette vie toujours plus rapide. Une occasion de me poser, de rencontrer des personnes dont certaines sont devenues mes amies, de ne plus compter le temps, tout en me recentrant sur mon corps. Tout ça agrémenté de mets qui ravissent nos papilles et offrent également à notre corps une occasion de se régénérer. Isabelle y reste disponible, entière, attentive à chacun d'entre nous et par-dessus tout une excellente professeure. Je ne recommande presque pas, car il risque de ne plus y avoir de place !</p>
+          </blockquote>
+          <figcaption><b>Karine G.</b>Moulin de Tessé, Yvelines · 3 années de suite</figcaption>
+        </figure>
+        <figure class="slide" role="group" aria-roledescription="avis" aria-label="3 sur 3">
+          <blockquote>
+            <p class="slide-hl">Isabelle sait s'adapter à tous les niveaux.</p>
+            <p class="slide-full">Une première pour moi et que de bonnes surprises. Isabelle sait s'adapter à tous les niveaux. De la bienveillance, des rires, de la détente, des promenades et aussi des courbatures ! Une belle retraite sportive, je recommande !</p>
+          </blockquote>
+          <figcaption><b>Marine L.</b>Maison Welcome, près d'Angoulême · mars 2024</figcaption>
+        </figure>
+      </div>
+      <div class="slider-nav">
+        <button class="slider-prev" type="button" aria-label="Avis précédent"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+        <p class="slider-count" aria-live="polite"><span>1</span> / 3</p>
+        <button class="slider-next" type="button" aria-label="Avis suivant"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      </div>
     </div>
     </div>
   </section>

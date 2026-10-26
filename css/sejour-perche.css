@@ -445,3 +445,25 @@ footer .wrap.legal { display: flex; flex-wrap: wrap; justify-content: center; ga
 .btn-outline-light { background: transparent; color: var(--beige); border-color: var(--beige); justify-self: start; }
 .btn-outline-light:hover { background: var(--beige); color: var(--orange); filter: none; }
 @media (max-width: 760px) { .btn-outline-light { justify-self: stretch; } }
+
+/* ---------- Avis en carrousel (test sur la page Perche) ---------- */
+.slider { max-width: 860px; margin-inline: auto; display: grid; justify-items: center; gap: 24px; }
+.slides { width: 100%; display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; }
+.slides::-webkit-scrollbar { display: none; }
+.slides:focus-visible { outline-offset: 6px; }
+.slide { flex: 0 0 100%; scroll-snap-align: start; margin: 0; padding: 0 24px; display: grid; gap: 24px; justify-items: center; align-content: start; text-align: center; }
+.slide blockquote { margin: 0; display: grid; gap: 20px; }
+.slide-hl { font-family: var(--f-serif); font-size: clamp(1.6rem, 3.6vw, 2.4rem); line-height: 1.2; text-wrap: balance; }
+.slide-hl::before { content: "« "; color: var(--orange); }
+.slide-hl::after { content: " »"; color: var(--orange); }
+.slide-full { max-width: 640px; margin-inline: auto; font-size: 1rem; line-height: 1.65; color: var(--ink-soft); }
+.slide figcaption { font-size: 0.875rem; color: var(--ink-soft); }
+.slide figcaption b { display: block; font-weight: 600; color: var(--ink); }
+.slider-nav { display: flex; align-items: center; gap: 24px; }
+.slider-nav button { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--orange); background: transparent; color: var(--orange); display: grid; place-items: center; cursor: pointer; transition: background .2s ease, color .2s ease; }
+.slider-nav button svg { width: 20px; height: 20px; }
+.slider-nav button:hover:not(:disabled) { background: var(--orange); color: var(--on-orange); }
+.slider-nav button:disabled { opacity: .35; cursor: default; }
+.slider-count { min-width: 5ch; text-align: center; font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
+@media (max-width: 760px) { .slide { padding: 0 4px; } .slide-full { font-size: 0.9375rem; } }
+@media (prefers-reduced-motion: reduce) { .slides { scroll-behavior: auto; } .slider-nav button { transition: none; } }
