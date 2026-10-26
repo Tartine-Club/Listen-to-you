@@ -38,6 +38,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="css/sejour-perche.css">
+<link rel="stylesheet" href="css/avis.css">
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="star" viewBox="0 0 100 100"><polygon fill="currentColor" points="50,2 58.4,29.7 83.9,16.1 70.3,41.6 98,50 70.3,58.4 83.9,83.9 58.4,70.3 50,98 41.6,70.3 16.1,83.9 29.7,58.4 2,50 29.7,41.6 16.1,16.1 41.6,29.7"/></symbol>
@@ -365,15 +366,37 @@
       <p class="serif">Des retraites avec Isabelle depuis 2020</p>
     </div>
     <div class="wrap">
-    <figure class="voice-feature">
+    <!-- Avis en carrousel : la phrase forte de chaque avis en grand, l'avis complet dessous (css/avis.css, js/avis.js) -->
+    <div class="slider" aria-roledescription="carrousel" aria-label="Avis des participants">
       <svg class="star" aria-hidden="true"><use href="#star"/></svg>
-      <blockquote>On peut progresser à notre allure, sans pression de performance.</blockquote>
-      <figcaption><b>Sarah M.</b>Moulin de Tessé et maison Welcome, près d'Angoulême</figcaption>
-    </figure>
-    <div class="voices">
-      <figure class="voice"><blockquote>On a beaucoup aimé notre escapade de 4 jours avec Isabelle à la maison Welcome, située en pleine nature. Des sessions de Pilates, Yoga et Danse formidables, complètes, ludiques et dans la bonne humeur ! On a aussi apprécié les conférences sur le sucre, très instructives. Une escapade sportive, riche en rencontres, dans une super ambiance ! À refaire…</blockquote><figcaption><b>Bénédicte D.</b>Maison Welcome, près d'Angoulême · mars 2024</figcaption></figure>
-      <figure class="voice"><blockquote>Une première pour moi et que de bonnes surprises. Isabelle sait s'adapter à tous les niveaux. De la bienveillance, des rires, de la détente, des promenades et aussi des courbatures ! Une belle retraite sportive, je recommande !</blockquote><figcaption><b>Marine L.</b>Maison Welcome, près d'Angoulême · mars 2024</figcaption></figure>
-      <figure class="voice"><blockquote>J'ai effectué 2 séjours Pilates et Yoga avec Isabelle. Ce fut une parenthèse de bien-être. Accompagnée par la bienveillance d'Isabelle, on peut progresser à notre allure, sans pression de performance. Juste être à l'écoute de son corps, de ses besoins, et c'est tellement nécessaire dans ce monde… J'ai hâte du prochain séjour.</blockquote><figcaption><b>Sarah M.</b>Moulin de Tessé et maison Welcome, près d'Angoulême</figcaption></figure>
+      <div class="slides" tabindex="0">
+        <figure class="slide" role="group" aria-roledescription="avis" aria-label="1 sur 3">
+          <blockquote>
+            <p class="slide-hl">On peut progresser à notre allure, sans pression de performance.</p>
+            <p class="slide-full">J'ai effectué 2 séjours Pilates et Yoga avec Isabelle. Ce fut une parenthèse de bien-être. Accompagnée par la bienveillance d'Isabelle, on peut progresser à notre allure, sans pression de performance. Juste être à l'écoute de son corps, de ses besoins, et c'est tellement nécessaire dans ce monde… J'ai hâte du prochain séjour.</p>
+          </blockquote>
+          <figcaption><b>Sarah M.</b>Moulin de Tessé et maison Welcome, près d'Angoulême</figcaption>
+        </figure>
+        <figure class="slide" role="group" aria-roledescription="avis" aria-label="2 sur 3">
+          <blockquote>
+            <p class="slide-hl">Une escapade sportive, riche en rencontres, dans une super ambiance !</p>
+            <p class="slide-full">On a beaucoup aimé notre escapade de 4 jours avec Isabelle à la maison Welcome, située en pleine nature. Des sessions de Pilates, Yoga et Danse formidables, complètes, ludiques et dans la bonne humeur ! On a aussi apprécié les conférences sur le sucre, très instructives. Une escapade sportive, riche en rencontres, dans une super ambiance ! À refaire…</p>
+          </blockquote>
+          <figcaption><b>Bénédicte D.</b>Maison Welcome, près d'Angoulême · mars 2024</figcaption>
+        </figure>
+        <figure class="slide" role="group" aria-roledescription="avis" aria-label="3 sur 3">
+          <blockquote>
+            <p class="slide-hl">Isabelle sait s'adapter à tous les niveaux.</p>
+            <p class="slide-full">Une première pour moi et que de bonnes surprises. Isabelle sait s'adapter à tous les niveaux. De la bienveillance, des rires, de la détente, des promenades et aussi des courbatures ! Une belle retraite sportive, je recommande !</p>
+          </blockquote>
+          <figcaption><b>Marine L.</b>Maison Welcome, près d'Angoulême · mars 2024</figcaption>
+        </figure>
+      </div>
+    <div class="slider-nav">
+      <button class="slider-prev" type="button" aria-label="Avis précédent"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <p class="slider-count" aria-live="polite"><span>1</span> / 3</p>
+      <button class="slider-next" type="button" aria-label="Avis suivant"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+    </div>
     </div>
     </div>
   </section>
@@ -522,3 +545,4 @@
 </div>
 
 <script src="js/sejour-perche.js"></script>
+<script src="js/avis.js"></script>

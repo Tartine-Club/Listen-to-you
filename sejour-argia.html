@@ -38,6 +38,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="css/sejour-perche.css">
+<link rel="stylesheet" href="css/avis.css">
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="star" viewBox="0 0 100 100"><polygon fill="currentColor" points="50,2 58.4,29.7 83.9,16.1 70.3,41.6 98,50 70.3,58.4 83.9,83.9 58.4,70.3 50,98 41.6,70.3 16.1,83.9 29.7,58.4 2,50 29.7,41.6 16.1,16.1 41.6,29.7"/></symbol>
@@ -355,15 +356,37 @@
       <p class="serif">La retraite au domaine d'Argia, en 2026</p>
     </div>
     <div class="wrap">
-    <figure class="voice-feature">
+    <!-- Avis en carrousel : la phrase forte de chaque avis en grand, l'avis complet dessous (css/avis.css, js/avis.js) -->
+    <div class="slider" aria-roledescription="carrousel" aria-label="Avis des participants">
       <svg class="star" aria-hidden="true"><use href="#star"/></svg>
-      <blockquote>Je suis rentrée sur un nuage, détendue et ressourcée.</blockquote>
-      <figcaption><b>Isabelle P.</b>Domaine d'Argia, Pays basque · juillet 2026</figcaption>
-    </figure>
-    <div class="voices">
-      <figure class="voice"><blockquote>J'ai passé une merveilleuse semaine au domaine d'Argia lors du séjour organisé par Isabelle l'été dernier. Tout était parfait : le lieu, les activités, les repas bios et végétariens, les personnes rencontrées… Un séjour dont je ressens encore aujourd'hui les bienfaits. Merci infiniment Isa !</blockquote><figcaption><b>Corinne Y.</b>Domaine d'Argia, Pays basque · juillet 2026</figcaption></figure>
-      <figure class="voice"><blockquote>Je participe aux retraites d'Isabelle depuis 2020 et j'y retrouve à chaque fois le même plaisir : des cours d'une grande qualité pédagogique, des lieux choisis avec soin pour que l'on s'y sente bien, des repas sains et délicieux et surtout la joie et la bonne humeur qu'Isabelle communique à ses élèves et qui donnent à ses stages un caractère unique. On revient régénérés et avec énormément d'énergie !</blockquote><figcaption><b>Anne-Claire C.</b>Aix-en-Provence (2020), domaine d'Argia (2026)</figcaption></figure>
-      <figure class="voice"><blockquote>J'ai participé au séjour Slow life, Pilates et Yoga en juillet 2026 et je suis rentrée sur un nuage, détendue et ressourcée. Isabelle est une excellente prof, attentive, encourageante, calme et énergique à la fois. Elle crée une énergie positive au bénéfice de tous les participants. Je ne peux que recommander de participer à ses cours et séjours, même si, comme moi, on n'a pas une forme olympique ni une pratique assidue du yoga. D'ailleurs, je compte bien me réinscrire aux prochains séjours !</blockquote><figcaption><b>Isabelle P.</b>Domaine d'Argia, Pays basque · juillet 2026</figcaption></figure>
+      <div class="slides" tabindex="0">
+        <figure class="slide" role="group" aria-roledescription="avis" aria-label="1 sur 3">
+          <blockquote>
+            <p class="slide-hl">Je suis rentrée sur un nuage, détendue et ressourcée.</p>
+            <p class="slide-full">J'ai participé au séjour Slow life, Pilates et Yoga en juillet 2026 et je suis rentrée sur un nuage, détendue et ressourcée. Isabelle est une excellente prof, attentive, encourageante, calme et énergique à la fois. Elle crée une énergie positive au bénéfice de tous les participants. Je ne peux que recommander de participer à ses cours et séjours, même si, comme moi, on n'a pas une forme olympique ni une pratique assidue du yoga. D'ailleurs, je compte bien me réinscrire aux prochains séjours !</p>
+          </blockquote>
+          <figcaption><b>Isabelle P.</b>Domaine d'Argia, Pays basque · juillet 2026</figcaption>
+        </figure>
+        <figure class="slide" role="group" aria-roledescription="avis" aria-label="2 sur 3">
+          <blockquote>
+            <p class="slide-hl">Tout était parfait : le lieu, les activités, les repas bios et végétariens, les personnes rencontrées…</p>
+            <p class="slide-full">J'ai passé une merveilleuse semaine au domaine d'Argia lors du séjour organisé par Isabelle l'été dernier. Tout était parfait : le lieu, les activités, les repas bios et végétariens, les personnes rencontrées… Un séjour dont je ressens encore aujourd'hui les bienfaits. Merci infiniment Isa !</p>
+          </blockquote>
+          <figcaption><b>Corinne Y.</b>Domaine d'Argia, Pays basque · juillet 2026</figcaption>
+        </figure>
+        <figure class="slide" role="group" aria-roledescription="avis" aria-label="3 sur 3">
+          <blockquote>
+            <p class="slide-hl">On revient régénérés et avec énormément d'énergie !</p>
+            <p class="slide-full">Je participe aux retraites d'Isabelle depuis 2020 et j'y retrouve à chaque fois le même plaisir : des cours d'une grande qualité pédagogique, des lieux choisis avec soin pour que l'on s'y sente bien, des repas sains et délicieux et surtout la joie et la bonne humeur qu'Isabelle communique à ses élèves et qui donnent à ses stages un caractère unique. On revient régénérés et avec énormément d'énergie !</p>
+          </blockquote>
+          <figcaption><b>Anne-Claire C.</b>Aix-en-Provence (2020), domaine d'Argia (2026)</figcaption>
+        </figure>
+      </div>
+    <div class="slider-nav">
+      <button class="slider-prev" type="button" aria-label="Avis précédent"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+      <p class="slider-count" aria-live="polite"><span>1</span> / 3</p>
+      <button class="slider-next" type="button" aria-label="Avis suivant"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+    </div>
     </div>
     </div>
   </section>
@@ -516,3 +539,4 @@
 </div>
 
 <script src="js/sejour-perche.js"></script>
+<script src="js/avis.js"></script>

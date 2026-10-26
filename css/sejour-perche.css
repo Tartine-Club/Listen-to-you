@@ -241,16 +241,7 @@ figcaption { margin-top: 10px; font-size: 0.8125rem; color: var(--ink-soft); }
 @keyframes reel { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 @media (max-width: 760px) { .reel img { height: 200px; margin-right: 8px; } .reel { margin-top: 80px; } #temoignages .stage-head { padding-top: 48px; } }
 @media (prefers-reduced-motion: reduce) { .reel { overflow-x: auto; } .reel-track { animation: none; } }
-.voices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.voice { margin: 0; border: 1px solid var(--orange); padding: 32px 28px; display: grid; gap: 18px; align-content: space-between; }
-.voice blockquote { margin: 0; font-family: var(--f-serif); font-size: 1.2rem; line-height: 1.4; }
-.voice blockquote::before { content: "“"; color: var(--orange); margin-right: 2px; }
-.voice blockquote::after { content: "”"; color: var(--orange); margin-left: 2px; }
-.voice figcaption { margin: 0; font-size: 0.875rem; }
-.voice figcaption b { display: block; font-weight: 600; color: var(--ink); }
 /* Maquette : avis à remplacer par de vrais témoignages */
-.voices.todo .voice { border-style: dashed; }
-.voices.todo blockquote { color: var(--ink-soft); }
 .todo-note { text-align: center; font-size: 0.8125rem; color: var(--ink-soft); margin-top: 20px; }
 
 /* ---------- Réserver ---------- */
@@ -347,7 +338,7 @@ footer address { font-style: normal; }
   .facts div { padding: 20px 16px; }
   .stage-head { padding-top: 80px; margin-bottom: 40px; }
   .intro { padding-top: 72px; gap: 24px; }
-  .guide, .infos-grid, .care, .voices, .acts, .form, .creds, .intro, .place, .duo, .duo.flip, .essentials { grid-template-columns: minmax(0, 1fr); }
+  .guide, .infos-grid, .care, .acts, .form, .creds, .intro, .place, .duo, .duo.flip, .essentials { grid-template-columns: minmax(0, 1fr); }
   .guide .photo { min-height: 260px; }
   .photo-quote { margin-top: 72px; }
   .photo-quote .wrap { padding-block: 48px; }
@@ -402,14 +393,6 @@ a { text-underline-offset: 3px; transition: color .2s ease; }
 footer .wrap.legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; margin-top: 40px; padding-top: 20px; border-top: 1px solid color-mix(in srgb, var(--beige) 45%, transparent); font-size: 0.8125rem; }
 @media (prefers-reduced-motion: reduce) { .btn, a { transition: none; } .btn:active { transform: none; } }
 
-/* ---------- Avis : une citation à la une au-dessus des 3 cartes ---------- */
-.voice-feature { margin: 0 auto 64px; max-width: 46rem; display: grid; justify-items: center; gap: 20px; text-align: center; }
-.voice-feature blockquote { margin: 0; font-family: var(--f-serif); font-size: clamp(1.7rem, 4.2vw, 2.8rem); line-height: 1.18; text-wrap: balance; }
-.voice-feature blockquote::before { content: "« "; color: var(--orange); }
-.voice-feature blockquote::after { content: " »"; color: var(--orange); }
-.voice-feature figcaption { font-size: 0.875rem; color: var(--ink-soft); }
-.voice-feature figcaption b { display: block; font-weight: 600; color: var(--ink); }
-@media (max-width: 760px) { .voice-feature { margin-bottom: 40px; gap: 14px; } }
 
 /* ---------- Variantes pour les pages Argia et Yaya (même gabarit que le Perche) ---------- */
 /* Mosaïque à 4 photos : la 2e, panoramique, prend toute la largeur à droite */
@@ -445,25 +428,3 @@ footer .wrap.legal { display: flex; flex-wrap: wrap; justify-content: center; ga
 .btn-outline-light { background: transparent; color: var(--beige); border-color: var(--beige); justify-self: start; }
 .btn-outline-light:hover { background: var(--beige); color: var(--orange); filter: none; }
 @media (max-width: 760px) { .btn-outline-light { justify-self: stretch; } }
-
-/* ---------- Avis en carrousel (test sur la page Perche) ---------- */
-.slider { max-width: 860px; margin-inline: auto; display: grid; justify-items: center; gap: 24px; }
-.slides { width: 100%; display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; }
-.slides::-webkit-scrollbar { display: none; }
-.slides:focus-visible { outline-offset: 6px; }
-.slide { flex: 0 0 100%; scroll-snap-align: start; margin: 0; padding: 0 24px; display: grid; gap: 24px; justify-items: center; align-content: start; text-align: center; }
-.slide blockquote { margin: 0; display: grid; gap: 20px; }
-.slide-hl { font-family: var(--f-serif); font-size: clamp(1.6rem, 3.6vw, 2.4rem); line-height: 1.2; text-wrap: balance; }
-.slide-hl::before { content: "« "; color: var(--orange); }
-.slide-hl::after { content: " »"; color: var(--orange); }
-.slide-full { max-width: 640px; margin-inline: auto; font-size: 1rem; line-height: 1.65; color: var(--ink-soft); }
-.slide figcaption { font-size: 0.875rem; color: var(--ink-soft); }
-.slide figcaption b { display: block; font-weight: 600; color: var(--ink); }
-.slider-nav { display: flex; align-items: center; gap: 24px; }
-.slider-nav button { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--orange); background: transparent; color: var(--orange); display: grid; place-items: center; cursor: pointer; transition: background .2s ease, color .2s ease; }
-.slider-nav button svg { width: 20px; height: 20px; }
-.slider-nav button:hover:not(:disabled) { background: var(--orange); color: var(--on-orange); }
-.slider-nav button:disabled { opacity: .35; cursor: default; }
-.slider-count { min-width: 5ch; text-align: center; font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
-@media (max-width: 760px) { .slide { padding: 0 4px; } .slide-full { font-size: 0.9375rem; } }
-@media (prefers-reduced-motion: reduce) { .slides { scroll-behavior: auto; } .slider-nav button { transition: none; } }
