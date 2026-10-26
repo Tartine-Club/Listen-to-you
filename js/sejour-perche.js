@@ -12,8 +12,8 @@
       done.hidden = false;
       return;
     }
-    if (!form.elements.consent.checked) {
-      done.textContent = "Cochez la case d'accord pour qu'Isabelle puisse utiliser vos informations et vous répondre.";
+    if (!form.elements.consent.checked || !form.elements.charte.checked) {
+      done.textContent = "Cochez les deux cases : l'accord pour qu'Isabelle utilise vos informations, et la charte de participation.";
       done.hidden = false;
       return;
     }

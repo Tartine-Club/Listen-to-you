@@ -438,3 +438,6 @@ footer .wrap.legal { display: flex; flex-wrap: wrap; justify-content: center; ga
 @media (max-width: 480px) { .rooms.two { grid-template-columns: minmax(0, 1fr); } }
 /* Réserver sur téléphone : le texte est aligné à gauche, les étoiles passent dans la marge du haut pour ne pas le couvrir */
 @media (max-width: 760px) { .cta .band-star { width: 56px; height: 56px; top: 12px; } .cta .band-star.l { left: -28px; } .cta .band-star.r { right: -28px; } }
+/* Résumé des conditions d'annulation sous les étapes de réservation */
+.cta-note { font-size: 0.875rem; line-height: 1.5; padding-top: 16px; border-top: 1px solid color-mix(in srgb, var(--beige) 45%, transparent); }
+.cta-note a { color: inherit; }
