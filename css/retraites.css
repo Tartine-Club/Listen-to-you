@@ -272,3 +272,6 @@ html { scroll-behavior: smooth; }
 .doc-sign { font-family: var(--f-serif); font-size: 1.25rem; color: var(--ink) !important; }
 .doc-back { display: flex; justify-content: center; }
 @media (max-width: 760px) { .doc-body { gap: 36px; margin-bottom: 72px; } .doc-table th, .doc-table td { padding: 12px; } }
+
+/* Galerie sur téléphone : la 5e photo est masquée, la 4e prend toute la largeur pour ne pas laisser de trou */
+@media (max-width: 760px) { .gallery img:nth-child(4) { grid-column: 1 / -1; } }
